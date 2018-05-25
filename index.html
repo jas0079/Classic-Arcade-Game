@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Udacity Classic Arcade Game Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="initializeGame()">
+    <!--Startup screen with game instructions -->
+    <div id="popup-window-with-instructions" class="modal priority">
+        <div class="modal-content">
+            <h4 class="normal-title color-title">Gardening with Cats</h4>
+            <div class="rules">
+                <ul>
+                    <li>Your cat wants to cross the neighbours lawn.</li>
+                    <li>But pay attention, there is a vicious and crazy landmawler on the loose!</li><br>
+                    <li>To win the game your cat has to cross the <strong>700 points barrier</strong>.</li>
+                    <li>Use the arrow keys to move your cat.</li>
+                    <li>You have 3 lives, not 7, use them with caution.</li>
+                </ul>
+            </div>
+            <button id="start-game-btn" class="new-game-btn">Start game</button>
+        </div>
+    </div>
+
+    <!--Loading the gaming garden-->
+    <div id="overlay" class="overlay"></div>
+
+    <header>
+       <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <div class="container">
+            <div class="board">
+                <div id="lives">
+                    <img src="images/Heart.png" alt="heart">
+                    <img src="images/Heart.png" alt="heart">
+                    <img src="images/Heart.png" alt="heart">
+                </div>
+                <p id="score">Your score: 0</p>
+            </div>
+        </div>
+
+        <!-- Displays the Game Over message box-->
+        <div id="popup-window" class="modal">
+            <div class="modal-content">
+                <h3 class="game-over-title">Your cat has been runover too many times.</h3>
+                <div class="bug-wrapper">
+                    <img class="bug" src="images/enemy-bug-small.png" alt="enemy-bug">
+                </div>
+                <p>You earned <span id="total-score"></span> points, but it's not enough to win the game...</p>
+                <button id="reload-game-btn" class="new-game-btn">Try again?</button>
+            </div>
+        </div>
+
+        <!--Displays the winning box-->
+        <div id="popup-window-for-winning" class="modal">
+            <div class="modal-content">
+                <h3 class="normal-title">Congratulations, you cat has survived!</h3>
+                <img class="gold-medal" src="images/medal.png" alt="gold-medal">
+                <p>You reached the other side of the garden with 700 points.</p>
+                <button id="reload-game-after-win-btn" class="new-game-btn win-btn">Play again?</button>
+            </div>
+           
+        </div>
+    </header>
+
+    <script src="js/resources.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
