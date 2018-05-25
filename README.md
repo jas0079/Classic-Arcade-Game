@@ -27,9 +27,6 @@ Use your arrow keys to navigate the cat and avoid the landmawlers. Those guys ar
 
 Enjoy!
 
-## Licence
-
-The content of this repository is free and is licensed under a [MIT Licence](https://choosealicense.com/licenses/mit/).
 
 
 
